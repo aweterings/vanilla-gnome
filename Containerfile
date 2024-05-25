@@ -27,4 +27,4 @@ RUN <<-EOT bash
 		gnome-shell-extension-background-logo
 
 	rpm-ostree cleanup -m && ostree container commit
-EOT
+EOT ->>
