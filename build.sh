@@ -12,22 +12,11 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# Install RPM Fusion repository
-
-#rpm-ostree install \
-#		https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-#		https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-# rpm-ostree install rpmfusion-free-release rpmfusion-nonfree-release \
-#		--uninstall rpmfusion-free-release \
-#		--uninstall rpmfusion-nonfree-release
-
 # this installs a package from fedora repos
 rpm-ostree install screen
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
-
-flatpak install flathub org.mozilla.Thunderbird
 
 # rpm-ostree install Broadcom drivers
 rpm-ostree install broadcom-wl
